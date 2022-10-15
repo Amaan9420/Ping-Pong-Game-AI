@@ -1,0 +1,25 @@
+.heading{
+    width: 100% ;
+
+}
+
+.heading h3{
+    display:inline;
+    text-shadow: 5px  5px 5px red;
+}
+.heading button{
+    float: right;
+    border: 3px solid blue;
+    box-shadow: 5px 5px 5px blue;
+}
+.image1{
+    width: 100%;
+
+}
+#start,#status{
+    font-size:25px;
+    border: 2px solid green;
+    box-shadow: 5px 5px 5px green;
+    background-color: chocolate;
+    color: aliceblue;
+}
