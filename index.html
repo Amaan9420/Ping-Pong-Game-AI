@@ -18,7 +18,7 @@
             <center>
               <div class="btn btn-primary heading">
                 <h3>AI Ping Pong Game</h3>
-                <button class="btn btn-danger">Instructions</button>
+                <button class="btn btn-danger" data-toggle="modal" data-target="#modal1">Instructions</button>
               </div>
               <br>
               <button id="start" onclick="startGame()" class="btn">Play Game</button>
@@ -31,6 +31,19 @@
             
               </div>
               <div id="game_console"></div>
+              <div id="modal1" class="modal fade">
+                <div class="modal-dialogue">
+               <div class="modal-content">
+                <div class="modal-header">
+                  <button class="close" data-dismiss="modal">&times;</button>
+                  <h4>Instructions</h4>
+                </div>
+                <div class="modal-body">
+                <h3>Use your wrists to move the paddle up and down to hit the ball.</h3>
+                </div>
+               </div>
+                </div>
+              </div>            
             </center>
         <script src="main.js"></script>
     </body>
