@@ -1,4 +1,5 @@
-
+noseX=0;
+noseY=0;
 /*created by prashant shukla */
 
 var paddle2 =10,paddle1=10;
@@ -23,18 +24,33 @@ var ball = {
 
 function setup(){
   var canvas =  createCanvas(700,600);
-  canvas.parent('canvas')
+  canvas.parent('canvas');
+  webcam = createCapture(VIDEO);
+  webcam.size(700,600);
+   p1 = ml5.poseNet(webcam,modal_loaded);
+ p1.on("pose",got_results);
+}
+function modal_loaded() {
+  console.log("Modal is Loaded");
+  
+}
+function got_results(results) {
+  if(results.length > 0){
+    noseX = results[0].pose.nose.x;
+    noseY = results[0].pose.nose.y;
+    console.log("resultsx" + noseX);
+    console.log("resultsy" + noseY);
+  }
 }
 
 
 function draw(){
 
  background(0); 
-
+image(webcam,0,0,700,600);
  fill("black");
  stroke("black");
  rect(680,0,20,700);
-
  fill("black");
  stroke("black");
  rect(0,0,20,700);
